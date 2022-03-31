@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <style>
+        *
+        {
+            
+            padding:0;
+            list-style: none;
+        }
+        ul
+        {
+            margin: 100px;
+            width: 800px;
+            height: 800px;
+            border: 10px red solid;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        li
+        {
+            width: 200px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            flex-shrink: 0;
+        }
+        li:first-child
+        {
+            background-color: #bfa;
+        }
+        li:nth-child(2)
+        {
+            background-color: orange;
+        }
+        li:nth-child(3)
+        {
+            background-color: yellowgreen;
+        }
+        li:nth-child(4)
+        {
+            background-color: sienna;
+        }
+        li:nth-child(5)
+        {
+            background-color: silver;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2
+            <div>2</div>
+        </li>
+        <li>3
+            <div>3</div>
+            <div>3</div>
+        </li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

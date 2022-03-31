@@ -1,0 +1,25 @@
+.clearfix::before,
+.clearfix::after
+{
+    content: ' ';
+    display: table;
+    clear:both;
+}
+
+body
+{
+    font: 14px/1.5 Helvetica Neue,Helvetica;
+    min-width:1226px;
+}
+/*设置一个类来表示中间容器宽度*/
+.w
+{
+    width:1226px;
+    margin:0px auto;
+}
+
+a 
+{
+    text-decoration: none;
+}
+

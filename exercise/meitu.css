@@ -1,0 +1,117 @@
+.top-wrapper {
+  background-color: #000;
+}
+a {
+  text-decoration: none;
+}
+.top-bar {
+  height: 44px;
+  background-color: #000;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 22px;
+}
+.top-bar .left-menu:hover .menu {
+  display: block;
+}
+.top-bar .left-menu .menu-button {
+  display: block;
+  width: 18px;
+  height: 48px;
+}
+.top-bar .left-menu .menu-button .line {
+  width: 18px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  transform-origin: left center;
+  transition: 0.3s;
+}
+.top-bar .left-menu .menu-button .line:nth-child(1) {
+  top: 18px;
+}
+.top-bar .left-menu .menu-button .line:nth-child(2) {
+  top: 24px;
+}
+.top-bar .left-menu .menu-button .line:nth-child(3) {
+  top: 30px;
+}
+.top-bar .left-menu .menu-button:hover .line:nth-child(1) {
+  transform: rotateZ(40deg);
+}
+.top-bar .left-menu .menu-button:hover .line:nth-child(2) {
+  display: none;
+}
+.top-bar .left-menu .menu-button:hover .line:nth-child(3) {
+  transform: rotateZ(-40deg);
+}
+.top-bar .left-menu .menu {
+  position: absolute;
+  padding-top: 60px;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  top: 44px;
+  left: 0px;
+  display: none;
+}
+.top-bar .left-menu .menu li {
+  border-bottom: 1px solid #747474;
+  width: 80%;
+  margin: 0 auto;
+  height: 44px;
+  font-size: 14px;
+}
+.top-bar .left-menu .menu li a {
+  color: #fff;
+  line-height: 44px;
+}
+.top-bar .left-menu .menu .sear {
+  margin-left: 10px;
+  color: #fff;
+  line-height: 44px;
+}
+.top-bar .logo {
+  width: 122px;
+  height: 30px;
+  overflow: hidden;
+}
+.top-bar .logo img {
+  width: 400px;
+  height: 400px;
+}
+.top-bar .user a {
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .left-menu {
+    order: 2;
+    flex-grow: 1;
+  }
+  .left-menu #menu1 {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    position: static;
+    justify-content: space-around;
+  }
+  .left-menu #menu1 li {
+    border: 0;
+    width: auto;
+  }
+  .left-menu #menu1 .sear {
+    display: none;
+  }
+  .left-menu #menu-button1 {
+    display: none;
+  }
+  .user {
+    order: 3;
+  }
+  .logo {
+    order: 1;
+  }
+}

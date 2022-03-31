@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <style>
+        div
+        {
+            background-color: darkkhaki;
+            width:300px;
+            height:360px;
+            margin:50px auto;
+            border-top: solid 1px black;
+           
+        }
+        div>h1
+        {
+            font-size: 20px;
+            font-weight: bold;
+            height: 40px;  
+            display: inline-block;
+            border-top: 1px red solid;
+            margin-top: -1px;
+            padding-top: 10px;
+
+        }
+        h1>a:hover
+        {
+            color: darkred;
+        }
+     
+        li
+        {
+            font-size:13px;
+            height: 15px;
+            margin-bottom:14px;
+            
+        }
+        li::before
+        {
+            content: "■";
+            color: #333;
+            font-size: 10px;
+            margin-right: 10px;
+        }
+        a:link
+        {
+            color: #333333;
+        }
+        li>a:hover
+        {
+            color: darkred;
+        }
+        a>h3
+        {   
+
+            margin-top:-30px;
+            margin-bottom: 29px;
+            padding-left: 10px;
+            color: #fff;
+            font-weight: bold;
+        }
+        a
+        {
+            text-decoration: none;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h1><a href="javascript">体育</a></h1>
+        <br>
+        <a href="javascript:;"><img src="./img/1.jpeg" alt="tennis"><h3>费德勒首负迪米 扶额摇头不满发挥</h3></a>
+        <ul>
+            <li><a href="javascript:;">乔治：我爱LA喜欢和LBJ一起打球</a></li>
+            <li><a href="javascript:;">格林：3年前降薪就在等KD 特制T恤嘲讽LBJ</a></li>
+            <li><a href="javascript:;">塔克4000双鞋让保罗羡慕妒忌 乔丹被震惊</a></li>
+            <li><a href="javascript:;">CBA下季新赛制：常规赛4组循环增至46轮</a></li>
+        </ul>
+    </div>
+</body>
+</html>

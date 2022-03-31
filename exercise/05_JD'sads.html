@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <style>
+        .box{
+            width: 590px;
+            height: 472px;
+            margin:50px auto;
+            position: relative;
+        }
+        img
+        {
+            position: absolute;
+
+        }
+        /* li:nth-child(4)>a>img
+        {
+            z-index:1;
+            
+        } */
+        .pointer
+        {
+            position: absolute;
+            z-index: 9999;
+            bottom: 20px;
+            margin-left: 40px;
+        }
+        .pointer>a
+        {
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+            background-clip: content-box;
+            border: rgba(255,255,255,0) 2px solid;
+            float: left;
+            margin: 2px;
+            border-radius: 50%;
+           
+        }
+         /* .pointer>a:nth-child(1)
+        {
+            
+            background-color:rgba(255, 255, 255, 1);
+            border: rgba(255,255,255,0.3) 2px solid;
+        }  */
+        .pointer>a:hover
+        {
+            /* box-shadow:0px 0px 4px rgba(255, 255, 255, 1); */
+            background-color: rgba(255, 255, 255, 1) !important;
+            border: rgba(255,255,255,0.3) 2px solid !important;
+        }
+    </style>
+    <script>
+        window.onload=function()
+        {
+            var pointer=document.querySelectorAll(".pointer a");
+            var img=document.querySelectorAll("img");
+            var now=0;
+            img[now].style.zIndex=1;
+            pointer[now].style.border="rgba(255,255,255,0.3) 2px solid";
+            pointer[now].style.backgroundColor = "rgba(255,255,255,1)";
+            function change(i)
+            {
+                pointer[i].onclick = function () 
+                {
+                img[i].style.zIndex=2;
+                img[now].style.zIndex=0;
+                img[now].style.zIndex=1;
+                pointer[now].style.border = "rgba(255,255,255,0) 2px solid";
+                pointer[now].style.backgroundColor = "rgba(255,255,255,0.3)";
+                pointer[i].style.border = "rgba(255,255,255,0.3) 2px solid";
+                pointer[i].style.backgroundColor = "rgba(255,255,255,1)";
+                now=i;
+                }
+            }
+            var timer=setInterval(function(){
+                var i=now;
+                i++;
+                i=i%pointer.length;
+                img[i].style.zIndex=2;
+                img[now].style.zIndex=0;
+                img[now].style.zIndex=1;
+                pointer[now].style.border = "rgba(255,255,255,0) 2px solid";
+                pointer[now].style.backgroundColor = "rgba(255,255,255,0.3)";
+                pointer[i].style.border = "rgba(255,255,255,0.3) 2px solid";
+                pointer[i].style.backgroundColor = "rgba(255,255,255,1)";
+                now=i;
+            },3000)
+            change(0);
+            change(1);
+            change(2);
+            change(3);
+            change(4);
+            change(5);
+            change(6);
+            change(7);
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="box">   
+
+        <ul>
+            <li><a href="javascript:;"><img src="./img/05/1.jpg"></a></li>
+            <li><a href="javascript:;"><img src="./img/05/2.jpg"></a></li>
+            <li><a href="javascript:;"><img src="./img/05/3.jpg"></a></li>
+            <li><a href="javascript:;"><img src="./img/05/4.jpg"></a></li>
+            <li><a href="javascript:;"><img src="./img/05/5.jpg"></a></li>
+            <li><a href="javascript:;"><img src="./img/05/6.jpg"></a></li>
+            <li><a href="javascript:;"><img src="./img/05/7.jpg"></a></li>
+            <li><a href="javascript:;"><img src="./img/05/8.jpg"></a></li>
+         </ul>
+         <div class="pointer">
+             <a href="javascript:;"></a> 
+             <a href="javascript:;"></a>
+             <a href="javascript:;"></a>
+             <a href="javascript:;"></a>
+             <a href="javascript:;"></a>
+             <a href="javascript:;"></a>
+             <a href="javascript:;"></a>
+             <a href="javascript:;"></a>
+         </div>
+    </div>
+</body>
+</html>

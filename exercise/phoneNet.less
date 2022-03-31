@@ -1,0 +1,162 @@
+//整体布局
+@total-width:750;
+@center-width:693;
+html
+{
+    font-size: (100/750*40vw);
+    background-color: #eff0f4;
+}
+.w
+{
+    width: (693/40rem);
+    margin:0 auto;
+}
+a
+{
+    text-decoration: none;
+}
+
+//头部样式
+.top-bar:extend(.w)
+{
+    display: flex;
+    height: (175/40rem);
+    justify-content: space-between;
+    align-items: center;
+    .top-title
+    {
+        color: #24253d;
+        font-size: (50/40rem);
+    }
+    a
+    {
+        color: #999;
+        font-size: (40/40rem);
+    }
+}
+
+//第二行图片样式
+.banner:extend(.w)
+{
+    a img
+    {
+        width: 100%;
+    }
+    border-radius: (5/40rem);
+}
+
+//菜单样式
+.menu:extend(.w)
+{
+    height: (329/40rem);
+    display: flex;
+    flex-flow: row wrap;
+    a
+    {
+        width:(327/40rem);
+        height:(104/40rem);
+        color:#fff;
+        border-radius: (5/40rem);
+        line-height:(104/40rem);
+        font-size: (34/40rem);
+        i
+        {
+            margin:0 (10/40rem) 0 (34/40rem);
+        }
+    }
+    justify-content: space-between;
+    align-content: space-evenly;
+    .cource
+    {
+        background-color: #f97053;
+    }
+    .teac
+    {
+        background-color: #cd6efe;
+    }
+    
+    .donwl
+    {
+        background-color: #1bc4fb;
+    }
+    .tag
+    {
+        background-color: #fe4479;
+    }
+}
+
+//下面专栏样式
+.course-bar:extend(.w)
+{
+    height: (175/40rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: (-40/40rem);
+    span
+    {
+        font-size: (33/40rem);
+        color: #24253d;
+        padding-left: (10/40rem);
+        border-left: (5/40rem) solid #3a84ff;
+    }
+    a
+    {
+        font-size: (28/40rem);
+        color: #656565;
+    }
+    
+}
+.course-menu:extend(.w)
+{
+    overflow:auto;
+    display: flex;
+    flex-flow:row;
+    padding-bottom: (20/40rem);
+    
+    .course-exm
+    {
+        
+        width: (320/40rem);
+        height: (324/40rem);
+        background-color: #fff;
+        box-shadow: 0 0 (10/40rem) rgba(0, 0, 0, .3);
+        border-radius: (10/40rem);
+        padding:(22/40rem);
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        flex-shrink: 0;
+        margin:0 (20/40rem);
+        .course-info img
+        {
+            width:100%;
+            flex-shrink: 0;
+        }
+        .course-info
+        {
+            
+            span
+            {
+                width: 100%;
+                font-size: (28/40rem);
+                color: #24253d;
+            }
+        }
+
+        .user-info 
+        {
+            display: flex;
+            img
+            {
+                width:(42/40rem);
+                height:(42/40rem);
+                margin-right: (13/40rem);
+            }
+            font-size: (26/40rem);
+            color: #969393;
+            align-items: center;
+        }
+    }
+}

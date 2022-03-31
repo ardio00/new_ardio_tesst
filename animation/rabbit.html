@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rabbit
+        {
+            height: 250px;
+            width: 206px;
+            background-position: -34px;
+            animation-name: test;
+            animation-duration: 0.6s;
+            animation-timing-function: steps(5);
+            animation-play-state: running;
+            animation-iteration-count: infinite;
+            background-image: url(../source/img/bg2.png);
+        }
+       
+        @keyframes test
+        {
+            from
+            {
+                background-position: -34px;
+            }
+            to
+            {
+                background-position: -1300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rabbit"></div>
+</body>
+</html>

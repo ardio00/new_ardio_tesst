@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../FontAwesome/css/all.css">
+    <style>
+        .clearfix::before,
+        .clearfix::after
+        {
+            display: table;
+            content: " ";
+            clear: both;
+        }
+        .out
+        {
+            background-color: #E3E4E5;
+            width:auto;
+            border:1px #ddd solid;
+        }
+        .inside
+        {
+            width:1190px;
+            margin:0px auto;
+            font:12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+            line-height: 30px;
+        }
+        a,span,li>i
+        {
+            color: #999;
+            text-decoration: none;
+        }
+        .left
+        {
+            float: left;
+        }
+        .right
+        {
+            float: right;
+        }
+        .right>li
+        {
+            float: left;
+        }
+        .line
+        {
+            width:1px;
+            height: 10px;
+            background-color:rgb(204, 202, 202);
+            margin: 10px 12px;
+        }
+        .rrr,div>i,a:hover
+        {
+            color: #F10215;
+        }
+        .city
+        {
+            float: left;
+            width: 320px;
+            height: 436px;
+            border: 1px  solid #ddd;
+            border-top: none;
+            background-color: #fff;
+            display: none;
+            position:absolute;
+        }
+        .current-city
+        {
+            height: 30px;
+            width: 40px;
+            padding: 0px 10px;
+            border:1px solid transparent;
+            border-bottom: none;
+            border-top: none;
+        }
+        .left:hover .city
+        {
+            
+            display: block;
+            background-color: #fff;
+            /* border: 1px 1px 1px 10px solid rgb(204, 204, 204); */
+        }
+        .left:hover .current-city
+        {
+            border:1px solid #ddd;
+            border-bottom: none;
+            border-top: none;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <div class="inside  clearfix"   >
+            <div class="left">
+                <div class="current-city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="javascript:;">北京</a>
+                </div>
+                <div class="city">
+
+                </div>
+                
+            </div>
+            <ul class="right">
+                <li><a href="javascript:;">你好，请登录</a>
+                    <a href="javascript:;"class="rrr">免费注册</a>
+                </li> 
+                <li><div class="line"></div></li>
+                <li><a href="javascript:;">我的订单</a></li>
+                <li><div class="line"></div></li>
+                <li><a href="javascript:;">我的京东</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li><div class="line"></div></li>
+                <li><a href="javascript:;">京东会员</a></li>
+                <li><div class="line"></div></li>
+                <li><a href="javascript:;"class="rrr">企业采购</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li><div class="line"></div></li>
+                <li><span>客户服务</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li><div class="line"></div></li>
+                <li><span>网站导航</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li><div class="line"></div></li>
+                <li><span>手机京东</span></li>
+            </ul>
+
+        </div>
+
+    </div>
+</body>
+</html>
